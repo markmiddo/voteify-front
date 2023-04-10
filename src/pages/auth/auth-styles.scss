@@ -1,0 +1,103 @@
+@import "../../theme/colors";
+@import "../../theme/fontSizes";
+@import "../../theme/media";
+
+.formBackground {
+  min-height: calc(100vh - 60px *2) !important;
+  background-color: map-get($colors, backgroundGrey);
+  border-left: 1px solid rgba(224, 224, 224, .2);
+  @include media-down(md) {
+    background-color: map-get($colors, white);
+  }
+}
+
+.form {
+  margin: 120px 90px;
+  max-width: 370px;
+  @include media-down(lg) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  @include media-down(md) {
+    margin: 90px auto;
+  }
+
+  @include media-down(sm) {
+    margin: 50px auto;
+  }
+}
+
+.icon {
+  display: inline-block;
+  height: 24px;
+  cursor: pointer;
+  transition: all .25s ease;
+
+  &:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.googleIcon {
+  border: 1px solid #e0e0e0;
+  padding: 5px;
+  overflow: visible;
+}
+
+.role {
+  font-size: 18px;
+}
+
+.promotions {
+  padding: 120px 150px 120px 50px;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  @include media-down(lg) {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+}
+
+.title {
+  font-size: 50px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  &:first-child, &:nth-child(2n + 3) {
+    margin-left: 0;
+  }
+}
+
+.dots {
+  position: absolute;
+  top: 140px;
+  right: 90px;
+  @include media-down(lg) {
+    right: 10px;
+  }
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.colorGrey {
+  color: map-get($colors, textGrey);
+}
+
+.wrapper {
+  min-height: calc(100vh - 60px *2);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.error {
+  padding: 20px;
+  color: map-get($colors, error);
+  font-size: map-get($fontSizes, sm);
+}

@@ -1,0 +1,46 @@
+@import "theme/colors";
+@import "theme/media";
+@import "theme/vars";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 2px solid #dddddd;
+  background: #ffffff;
+  height: 76px;
+}
+
+.body {
+  -webkit-user-select: none;
+  user-select: none;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.title, .subtitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dragWrapper {
+  padding: 10px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.playWrapper {
+  margin-left: 15px;
+}
+
+.playBtn {
+  cursor: pointer;
+}
+

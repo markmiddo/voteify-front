@@ -1,0 +1,62 @@
+@import 'theme/colors';
+@import 'theme/fontSizes';
+
+.input {
+  width: 100%;
+  max-width: 370px;
+  position: relative;
+  color: map-get($colors, textGrey);
+  font-size: map-get($fontSizes, md);
+  background: map-get($colors, white);
+  border: 1px solid map-get($colors, borderGrey);
+  box-sizing: border-box;
+  margin: 10px 0 5px;
+  padding: 12px 16px;
+  transition: color .3s ease, border .3s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:focus {
+  outline: none;
+  color: map-get($colors, black);
+  border-color: map-get($colors, accent);
+  }
+  .error {
+    color: map-get($colors, error);
+    border-color: map-get($colors, error);
+  }
+}
+
+.full-width {
+  max-width: none !important;
+}
+
+.root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 370px;
+  position: relative;
+  .full-width {
+    max-width: none
+  }
+}
+
+.info {
+  color: map-get($colors, error);
+  font-size: 11px;
+  text-align: right;
+}
+
+.text {
+  transform: translateX(15px);
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity .4s ease, transform .6s ease;
+}
+
+.visible {
+  transform: translateX(0px);
+  opacity: 1;
+}

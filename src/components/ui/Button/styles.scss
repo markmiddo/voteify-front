@@ -1,0 +1,71 @@
+@import 'theme/colors';
+@import 'theme/fontSizes';
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: map-get($colors, black);
+  line-height: 1;
+  background: none;
+  border-radius: 3px;
+  padding: 12px 25px;
+  border: none;
+  text-decoration: none;
+  max-width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+
+  &:active, &:focus { outline: none; };
+}
+
+.default, .primary, .secondary, .accent {
+  background-color: map-get($voteifyTheme, primary);
+  transition: all .3s ease;
+  color: map-get($colors, white);
+
+  &:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+}
+.accent {
+  background-color: map-get($voteifyTheme, accent);
+  transition: all .3s ease;
+  color: map-get($colors, white);
+
+  &:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.light {
+  @extend .default;
+  color: map-get($colors, buttonGrey);
+}
+
+.danger {
+  color: map-get($colors, danger);
+}
+
+.secondary {
+  background-color: map-get($voteifyTheme, secondary);
+  color: #ffffff;
+}
+
+.disabled {
+  background-color: map-get($colors, buttonGrey) !important;
+  color: map-get($colors, textGrey);
+  box-shadow: none;
+  cursor: not-allowed;
+
+  &:hover {
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,51 @@
+@import 'theme/colors';
+@import 'theme/fontSizes';
+
+.container {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.info {
+  color: map-get($colors, error);
+  font-size: 11px;
+  text-align: center;
+}
+
+.text {
+  transform: translateX(15px);
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity .4s ease, transform .6s ease;
+}
+
+.loaded {
+  display: block;
+  margin-top: 3px;
+  color: map-get($themeColors, green);
+  font-size: 11px;
+  text-align: left;
+  opacity: 0;
+}
+
+.visible {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.root {
+  padding: 40px;
+  width: 95%;
+  max-width: 500px;
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 40px;
+  text-align: center;
+}

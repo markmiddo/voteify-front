@@ -1,0 +1,152 @@
+@import "theme/colors";
+@import "theme/media";
+
+.root {
+  min-height: calc(100vh - 60px *2) !important;
+  background-color: map-get($colors, backgroundGrey);
+  padding-top: 40px;
+  @include media-down(md) {
+    padding-top: 20px;
+  }
+}
+
+.eventsPlaceholder {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  left: 0;
+  font-size: 4em;
+  top: 30%;
+  color: #717171;
+  opacity: 0.3;
+}
+
+.eventsBlock {
+  padding: 40px 0;
+  margin: 0 20px;
+}
+
+.eventsPlate {
+  padding-bottom: 40px;
+  padding-top: 24px;
+
+  // For correct mobile device preloader displaying:
+  min-height: 135px;
+  position: relative;
+
+  .cardWrapper {
+    border-bottom: 2px solid #E0E0E0;
+  }
+
+  .eventRow:only-child {
+    @include media-down(md) {
+      div:last-child .cardWrapper {
+        border-bottom:none !important;
+      }
+    }
+  }
+
+  .eventRow:first-child {
+    .cardWrapper:only-child {
+      border-bottom: 2px solid #E0E0E0 !important;
+    }
+  }
+
+  .eventRow:last-child {
+    .cardWrapper {
+      border: none;
+      &:first-child {
+        @include media-down(md) {
+          border-bottom: 2px solid #E0E0E0;
+        }
+      }
+    }
+  }
+
+}
+
+
+.cardWrapper {
+  position: relative;
+  display: flex;
+  margin-top: 16px;
+  padding-bottom: 16px;
+
+  &:hover {
+    filter: currentColor;
+    .cardImage {
+      transform: translate(0px, -12px);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25), 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .cardImageWrapper .cardDots {
+      opacity: 1;
+    }
+  }
+
+  .cardImageWrapper {
+    position: relative;
+    margin-right: 26px;
+
+    .cardDots {
+      position: absolute;
+      z-index: 1;
+      left: -80px;
+      bottom: -52px;
+      opacity: 0;
+      transition: all .25s ease;
+      fill: red;
+    }
+
+    .cardImage {
+      position: relative;
+      transition: all .25s ease;
+      height: 252px;
+      width: 178px;
+      z-index: 2;
+      cursor: pointer;
+    }
+  }
+
+  .cardHeader {
+    margin-bottom: 32px;
+
+    .cardTitle {
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 23px;
+      margin: 0;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+  }
+
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+
+    .aboutWrap {
+      overflow: scroll;
+    }
+    p {
+      margin-bottom: 6px;
+    }
+
+  }
+
+}
+
+.select {
+  width: 150px;
+}
+
+.loading {
+  text-align: center;
+  z-index: 10000;
+  position: relative;
+}
+
+.loadingMargin {
+  margin-top: -90px;
+}

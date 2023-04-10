@@ -1,0 +1,23 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "extends": ["airbnb"],
+  "eslint linebreak-style": ["error", "windows"],
+  "rules": {
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
+    "react/require-default-props": 0,
+    "import/order": 0,
+    "react/prefer-stateless-function": 0,
+    "react/forbid-prop-types": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/no-array-index-key": 0,
+    "no-unused-expressions": 0
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  }
+}

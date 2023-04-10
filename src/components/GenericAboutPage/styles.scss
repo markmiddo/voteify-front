@@ -1,0 +1,30 @@
+@import 'theme/colors';
+
+
+.root {
+  padding-top: 115px;
+  font-size: 18px;
+  background-color: map-get($colors, backgroundGrey);
+  padding-bottom: 115px;
+  .header {
+    margin-bottom: 48px;
+  }
+  :global {
+
+    .title {
+      margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 23px;
+      font-weight: bold;
+    }
+
+    .text {
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      line-height: 19px;
+      margin-bottom: 56px;
+
+    }
+  }
+
+}

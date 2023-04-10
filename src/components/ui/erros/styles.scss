@@ -1,0 +1,50 @@
+@import "theme/media";
+
+.wrapper {
+  height: 100%;
+
+  .image {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/static/404.jpg')
+  }
+
+  .pageRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    height: 100%;
+
+    h1 {
+      color: #F4F4F4;
+      font-weight: bold;
+      font-size: 250px;
+      margin-bottom: 0.13944954128em;
+      margin-top: 0;
+
+      @include media-down(md) {
+        font-size: 170px;
+      }
+
+      @include media-down(sm) {
+        font-size: 130px;
+      }
+    }
+
+    h2 {
+      font-size: 2.25em;
+      color: #593DFF;
+      margin-bottom: 1em;
+    }
+
+    p {
+      line-height: 23px;
+      font-size: 18px;
+      color: #717171;
+      margin-bottom: 3.5em;
+    }
+
+  }
+}

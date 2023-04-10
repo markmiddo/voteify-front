@@ -1,0 +1,24 @@
+@import "theme/media";
+
+.youtube {
+  width: 770px;
+  height: 433px;
+  overflow: hidden;
+  @include media-down(md) {
+    width: 500px;
+    height: 270px;
+  }
+  @include media-down(sm) {
+    width: 450px;
+    height: 240px;
+  }
+  @include media-down(xs) {
+    width: 300px;
+    height: 153px;
+  }
+
+  @media (max-width: 370px) {
+    width: 200px;
+    height: 103px;
+  }
+}

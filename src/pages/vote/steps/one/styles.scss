@@ -1,0 +1,77 @@
+@import "theme/colors";
+@import "theme/media";
+@import "theme/fontSizes";
+@import "theme/vars";
+
+.songsHeader {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.songTittle {
+  margin-right: 20px;
+
+  @include media-down(xs) {
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 20px;
+  }
+}
+
+.hint {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.wrapInput {
+  flex: 1;
+  position: relative;
+  margin-left: 10px;
+  @include media-down(md) {
+    margin-left: 0;
+  }
+  .search {
+    padding: 10px 34px 10px 16px;
+    margin: 0;
+    &:focus + .searchIcon {
+      path, circle {
+        stroke: map-get($colors, accent);
+        transition: stroke .3s ease;
+      }
+    }
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  path, circle {
+    stroke: map-get($colors, borderGrey);
+    transition: stroke .3s ease;
+  }
+}
+
+.closeIcon {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+}
+
+.wrapSongs {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  max-height: 600px;
+  padding-right: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.mxh600 {
+  max-height: 600px;
+}
+
+.mxh400 {
+  max-height: 400px;
+}

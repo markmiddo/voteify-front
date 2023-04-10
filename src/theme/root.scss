@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:900|Nunito+Sans|Poppins:800&display=swap');
+@import './colors';
+@import './vars';
+//font-family: 'Nunito Sans', sans-serif;
+//font-family: 'Poppins', sans-serif;
+//font-family: 'Libre Franklin', sans-serif;
+
+:global {
+  @import '~bootstrap/scss/bootstrap-grid';
+
+  @import './toasty';
+  @import './spaces';
+  @import './select';
+  @import './fonts';
+  @import './nprogress';
+
+  html, body {
+    padding: 0;
+    margin: 0;
+    font-family: $font-Nunito;
+    color: map-get($voteifyTheme, text)
+  }
+
+  #layout {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+
+    .layout-header {
+      flex: 0 0 auto;
+    }
+
+    .layout-body {
+      flex: 1 1 auto;
+      position: relative;
+      min-height: 115px; // For preloader
+    }
+
+    .layout-footer {
+      flex: 0 0 auto;
+    }
+  }
+
+  @each $align in (center, right, left) {
+    .text-#{$align} {
+      text-align: $align;
+    }
+  }
+
+  @each $color, $colorHash in $themeColors {
+    .#{$color} {
+      background-color: $colorHash;
+    }
+  }
+
+  @each $color, $colorHash in $voteifyTheme {
+    .bg-#{$color} {
+      background-color: $colorHash;
+    }
+
+    .text-#{$color} {
+      color: $colorHash;
+    }
+  }
+
+  @each $color, $colorHash in $themeColors {
+    .fill-#{$color} {
+      path {
+        fill: $colorHash;
+      }
+    }
+  }
+
+  .ml-auto {
+    margin-left: auto;
+  }
+
+  .text-nowrap {
+    white-space: nowrap;
+  }
+
+  .text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .text-pre-wrap {
+    white-space: pre-wrap;
+  }
+
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+
+  a {
+    text-decoration: none;
+
+    &.underline {
+      text-decoration: underline;
+    }
+  }
+
+}

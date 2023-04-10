@@ -1,0 +1,99 @@
+@import "theme/colors";
+@import "theme/media";
+
+.root {
+  height: 60px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+  position: relative;
+}
+
+.row {
+  height: 60px;
+}
+
+.userIcon {
+  display: inline-block;
+}
+
+.username {
+  // margin-bottom: 4px;
+  display: inline-block;
+  @include media-down(xs) {
+    display: none;
+  }
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid map-get($colors, black);
+  margin-left: 5px;
+
+  margin-top: 0.5px;
+  @include media-down(xs) {
+    display: none;
+  }
+}
+
+.dropDown {
+  position: relative;
+  height: 60px;
+  padding: 0 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: map-get($colors, lightGrey);
+    .dropDownContent {
+      display: block;
+    }
+  }
+}
+
+.dropDownContent {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 175px;
+  @include media-down(xs) {
+    left: -125px;
+  }
+}
+
+.dropDownBody {
+  background-color: map-get($colors, white);
+  position: relative;
+  margin-top: 10px;
+  padding: 10px 0;
+  min-width: 175px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.05);
+}
+
+.element {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: map-get($colors, white);
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: map-get($colors, accent);
+    color: #ffffff;
+  };
+  &:focus {
+    outline: none;
+  };
+}
+
+.logOut {
+  color: map-get($voteifyTheme, secondary);
+}
+
+.image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}

@@ -1,0 +1,43 @@
+@import 'theme/colors';
+@import 'theme/media';
+@import 'theme/vars';
+
+.wrapper {
+	padding: 15px 0;
+	display: flex;
+	align-items: center;
+}
+
+.colLeft {
+	width: 60px;
+	text-align: center;
+	flex: 0 0 auto;
+}
+
+.colMiddle {
+	flex: 1 1 auto;
+	max-width: calc(100% - 60px);
+}
+
+.topIndex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: $font-LibreFranklin;
+	font-size: 38px;
+	height: 76px;
+	width: 100%;
+}
+
+.isActiveDrag {
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+	border-bottom: none;
+}
+
+.modalOverlay {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalBody {
+	overflow-y: visible;
+}

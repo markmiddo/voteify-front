@@ -1,0 +1,33 @@
+@import 'theme/colors';
+@import 'theme/fontSizes';
+
+.root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 370px;
+  position: relative;
+  .full-width {
+    max-width: none
+  }
+}
+
+.info {
+  text-align: right;
+  color: map-get($colors, error);
+  font-size: 11px;
+}
+
+.text {
+  transform: translateX(15px);
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity .4s ease, transform .6s ease;
+}
+
+.visible {
+  transform: translateX(0px);
+  opacity: 1;
+}

@@ -1,0 +1,30 @@
+@import "theme/vars";
+@import "theme/colors";
+@import "theme/media";
+
+.header {
+  margin: 15px 0;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+
+.title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.listWrapper {
+  padding-bottom: 50px;
+}
+
+.listTitle {
+  font-size: 26px;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}

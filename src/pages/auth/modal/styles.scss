@@ -1,0 +1,50 @@
+@import "theme/media";
+@import "theme/colors";
+@import "theme/fontSizes";
+
+.modalWrapper {
+  @include media-down(xs) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.formAuthModal {
+  width: 400px;
+  padding: 50px;
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  @include media-down(xs) {
+    width: 100%;
+  }
+}
+
+.icon {
+  display: inline-block;
+  height: 24px;
+  cursor: pointer;
+  transition: all .25s ease;
+  &:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.googleIcon {
+  border: 1px solid #e0e0e0;
+  padding: 5px;
+  overflow: visible;
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.error {
+  padding: 20px 0;
+  color: map-get($colors, error);
+  font-size: map-get($fontSizes, sm);
+}

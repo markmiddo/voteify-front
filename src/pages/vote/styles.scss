@@ -1,0 +1,229 @@
+@import 'theme/colors';
+@import 'theme/media';
+@import 'theme/fontSizes';
+@import 'theme/vars';
+
+.image {
+	width: 170px;
+	height: 236px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 4px 6px rgba(0, 0, 0, 0.1);
+	display: inline-block;
+	@include media-down(xs) {
+		width: 72px;
+		height: 102px;
+	}
+}
+
+.fs18 {
+	font-size: 18px;
+}
+
+.title {
+	font-size: 26px;
+	@include media-down(xs) {
+		font-size: 18px;
+		font-weight: 400;
+	}
+}
+
+.subtitle {
+	font-size: 18px;
+	@include media-down(xs) {
+		font-size: 15px;
+		color: map-get($colors, textGrey);
+	}
+}
+
+.about {
+	font-size: 18px;
+	@include media-down(xs) {
+		font-size: 15px;
+	}
+}
+
+.info {
+	display: inline-block;
+}
+
+.searchIcon {
+	position: absolute;
+	right: 10px;
+	top: 7px;
+	path,
+	circle {
+		stroke: map-get($colors, borderGrey);
+		transition: stroke 0.3s ease;
+	}
+}
+
+.closeIcon {
+	position: absolute;
+	right: 10px;
+	top: 13px;
+}
+
+.hint {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.wrapSongs {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	max-height: 600px;
+	padding-right: 20px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.mxh600 {
+	max-height: 600px;
+}
+
+.mxh400 {
+	max-height: 400px;
+}
+
+.songBody {
+	box-sizing: border-box;
+	border-bottom: 2px solid map-get($colors, borderGrey);
+	padding-bottom: 8px;
+	position: relative;
+}
+
+.link {
+	cursor: pointer;
+}
+
+.wrapInput {
+	flex: 1;
+	position: relative;
+	margin-left: 10px;
+	@include media-down(md) {
+		margin-left: 0;
+	}
+	.search {
+		padding: 10px 34px 10px 16px;
+		margin: 0;
+		&:focus + .searchIcon {
+			path,
+			circle {
+				stroke: map-get($colors, accent);
+				transition: stroke 0.3s ease;
+			}
+		}
+	}
+}
+
+.songTittle {
+	margin-right: 20px;
+	@include media-down(xs) {
+		font-size: 18px;
+		font-weight: 400;
+		margin-right: 5px;
+	}
+}
+
+.selectTitle {
+	margin-right: 20px;
+	@include media-down(sm) {
+		font-size: 18px;
+		font-weight: 400;
+		margin-right: 5px;
+	}
+}
+
+.more {
+	cursor: pointer;
+	outline: none;
+	&:focus + .hiddenInfo {
+		max-height: 2000px;
+		pointer-events: auto;
+		transition: max-height 0.5s ease-in;
+	}
+}
+
+.hiddenInfo {
+	@include media-down(xs) {
+		display: none;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.5s ease-out;
+	}
+}
+
+.relative {
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+}
+
+.active {
+	@include media-down(xs) {
+		background-color: rgba(200, 162, 200, 0.5);
+
+		p {
+			color: #111111;
+		}
+	}
+}
+
+.item {
+	padding: 5px 10px;
+}
+
+.date {
+	@include media-down(xs) {
+		font-size: 15px;
+	}
+}
+
+.startTooltip {
+	width: 150px;
+	margin-left: -75px;
+	text-align: center;
+	&:after {
+		left: 65px;
+	}
+}
+
+.modalOverlay {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalBody {
+	overflow-y: visible;
+}
+
+.secondLine {
+	@include media-down(sm) {
+		margin-top: 10px;
+	}
+}
+
+.limitModal {
+	padding: 40px 100px;
+}
+
+.choosed {
+	font-weight: 600;
+}
+
+.number {
+	margin-top: 10px;
+	height: 69px;
+}
+
+.error {
+	padding-top: 20px;
+	color: map-get($colors, error);
+	font-size: map-get($fontSizes, sm);
+}

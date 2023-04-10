@@ -1,0 +1,56 @@
+@import 'theme/colors';
+@import 'theme/fontSizes';
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 25px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  user-select: none;
+  min-width: 92px;
+  height: 41px;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  box-sizing: border-box;
+  border: 2px solid map-get($colors, black);
+  transition: background-color .4s ease-in-out;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: map-get($colors, accent);
+  transition: background-color .3s ease-out;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  border: none;
+  background-color: map-get($colors, accent);
+  .icon {
+    display: block;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  display: none;
+}

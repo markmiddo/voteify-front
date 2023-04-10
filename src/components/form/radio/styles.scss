@@ -1,0 +1,70 @@
+@import 'theme/colors';
+@import 'theme/fontSizes';
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1px solid map-get($colors, black);
+  transition: background-color .3s ease-in-out;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: map-get($colors, accent);
+  transition: background-color .3s ease-out;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  border: 2px solid map-get($colors, black);
+  background-color: map-get($colors, accent);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.info {
+  color: map-get($colors, error);
+  font-size: 11px;
+  text-align: right;
+}
+
+.text {
+  transform: translateX(15px);
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity .4s ease, transform .6s ease;
+  .visible {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

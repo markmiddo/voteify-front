@@ -1,0 +1,106 @@
+@import "theme/colors";
+@import "theme/media";
+
+.root {
+  margin-top: 60px;
+  margin-bottom: 50px;
+  @include media-down(sm) {
+    margin-top: 30px;
+  }
+}
+
+.imageFrame {
+  width: 450px;
+  box-shadow: 0 4.89985px 24.4992px rgba(0, 0, 0, 0.25), 0 4.89985px 7.34977px rgba(0, 0, 0, 0.1);
+  margin: 40px auto 0;
+
+  @include media-down(sm) {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+}
+
+.image {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.item {
+  box-sizing: border-box;
+  padding: 13px 0;
+  background-color: map-get($colors, white);
+  border-bottom: 2px solid map-get($colors, borderGrey);
+  position: relative;
+  @include media-down(sm) {
+    padding: 8px 0;
+  }
+}
+
+.position {
+  height: 100%;
+  @include media-down(md) {
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+}
+
+.number {
+  height: 69px;
+  @include media-down(sm) {
+    height: 59px;
+  }
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.wrapper {
+  margin-top: 10px;
+  position: relative;
+  padding-left: 50px;
+  @include media-down(sm) {
+    margin-top: 5px;
+  }
+}
+
+.content {
+  padding-left: 20px;
+}
+
+.getTicket {
+  @include media-down(md) {
+    flex-direction: column;
+  }
+}
+
+.buttonTicket {
+  margin-left: 40px;
+  margin-right: 20px;
+  @include media-down(md) {
+    margin: 20px 0 10px;
+  }
+}
+
+.votingTitle {
+  @include media-down(sm) {
+    margin-top: 30px;
+    font-size: 18px;
+    margin-left: 0;
+  }
+}
+
+.voting {
+  margin-top: 40px;
+  @include media-down(sm) {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.shareButton {
+  @include media-down(xs) {
+    margin-bottom: 10px;
+  }
+}
+

@@ -1,0 +1,78 @@
+@import "theme/colors";
+@import "theme/media";
+@import "theme/vars";
+
+.content {
+  min-height: 300px;
+  position: relative;
+}
+
+.eventBlock {
+  position: relative;
+  transition: all .25s ease;
+  box-shadow: 0 0 15px 1px #e0e0e0;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.blockHeader {
+  text-align: center;
+}
+
+.blockTitle {
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+
+.eventTitle {
+  margin: 0 0 5px;
+}
+
+.eventSubtitle {
+  margin: 0 0 25px;
+  font-size: 14px;
+  font-family: $font-Poppins;
+}
+
+.blockImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blockImage {
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.blockDescription {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.blockFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.emptyEvent {
+  min-height: 410px;
+  padding: 3px 20px;
+  border-left: 2px solid map-get($colors, borderGrey);
+
+  .placeholder {
+    color: map-get($colors, borderGrey);
+  }
+
+  @include media-down(sm) {
+    border-left: none;
+    min-height: 100%;
+    white-space: normal;
+  }
+}
+
+.loading {
+  min-height: calc(100vh - 60px * 2  - 40px) !important;
+}

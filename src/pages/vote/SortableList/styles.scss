@@ -1,0 +1,58 @@
+@import "theme/colors";
+@import "theme/media";
+
+.item {
+  margin-top: 10px;
+  user-select: none;
+  box-sizing: border-box;
+  padding: 13px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: map-get($colors, white);
+  border-bottom: 2px solid map-get($colors, borderGrey);
+  position: relative;
+}
+
+.helper {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  border-bottom: none;
+  .delete {
+    opacity: 0;
+  }
+}
+
+.drag {
+  cursor: grab;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  @include media-down(xs) {
+    margin-right: 10px;
+    left: 7px;
+  }
+}
+
+.delete {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+
+.itemText {
+  display: inline-block;
+  max-width: 100%;
+  height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemBody {
+  padding-left: 30px;
+  padding-right: 60px;
+  @include media-down(xs) {
+    padding-left: 12px;
+    padding-right: 10px;
+  }
+}

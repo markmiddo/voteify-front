@@ -1,0 +1,29 @@
+@import "theme/colors";
+@import "theme/fontSizes";
+
+.root {
+  margin: 0;
+  padding: 0;
+  color: map-get($colors, textGrey);
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+.sm {
+  font-size: map-get($fontSizes, sm);
+}
+
+.lg {
+  font-size: map-get($fontSizes, lg);
+}
+
+.md {
+  font-size: map-get($fontSizes, md);
+}
+
+.black {
+  color: black;
+}
+

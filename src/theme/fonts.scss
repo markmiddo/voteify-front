@@ -1,0 +1,29 @@
+@import './vars';
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-LibreFranklin;
+}
+
+.font-nunito {
+  font-family: $font-Nunito;
+}
+
+.font-poppins {
+  font-family: $font-Poppins;
+}
+.font-libreFranklin {
+  font-family: $font-LibreFranklin;
+}
+
+.lh-1 {
+  line-height: 1;
+}
+
+$whileIndex: 10;
+@while $whileIndex <= 50 {
+  .fs-#{$whileIndex} {
+    font-size: #{$whileIndex}px !important;
+  }
+
+  $whileIndex: $whileIndex + 2;
+}

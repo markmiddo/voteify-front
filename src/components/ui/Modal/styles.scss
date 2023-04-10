@@ -1,0 +1,44 @@
+@import "theme/colors";
+
+.container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  z-index: 999;
+  background: rgba(224, 224, 224, 0.5);
+}
+
+.overlay {
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  cursor: default;
+  background: none;
+  text-decoration: none;
+  border: 0 none;
+  padding: 0;
+}
+
+.popup {
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: map-get($colors, white);
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+}

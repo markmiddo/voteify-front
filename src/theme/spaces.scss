@@ -1,0 +1,43 @@
+@each $margin in (0, 5, 10, 15, 20, 25, 40, 50, 60) {
+  .m#{$margin} {
+    margin: $margin;
+  }
+
+  .mt#{$margin} {
+    margin-top: #{$margin}px;
+  }
+
+  .mb#{$margin} {
+    margin-bottom: #{$margin}px;
+  }
+
+  .ml#{$margin} {
+    margin-left: #{$margin}px;
+  }
+
+  .mr#{$margin} {
+    margin-right: #{$margin}px;
+  }
+}
+
+@each $margin in (0, 5, 10, 15, 20, 25, 40, 50, 60) {
+  .p#{$margin} {
+    margin: $margin;
+  }
+
+  .pt#{$margin} {
+    margin-top: #{$margin}px;
+  }
+
+  .pb#{$margin} {
+    margin-bottom: #{$margin}px;
+  }
+
+  .pl#{$margin} {
+    margin-left: #{$margin}px;
+  }
+
+  .pr#{$margin} {
+    margin-right: #{$margin}px;
+  }
+}

@@ -1,0 +1,54 @@
+@import 'theme/colors';
+@import 'theme/media';
+
+.title {
+  display: flex;
+  @include media-down(xs) {
+    display: block;
+  }
+}
+
+.label {
+  font-size: 18px;
+}
+
+.delimiter {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid map-get($colors, borderGrey);
+}
+
+.select {
+  max-width: 100px;
+}
+
+.tooltip {
+  @include media-down(sm) {
+    top: 100%;
+    left: -70px;
+  }
+}
+
+.lendingTooltip {
+  @include media-down(sm) {
+    top: 100%;
+    left: -125px;
+  }
+}
+
+.colorPicker {
+  @include media-down(md) {
+    margin-top: 40px;
+  }
+}
+
+.actions {
+  display: inline-block;
+  @include media-down(xs) {
+    display: block;
+    margin-top: 10px;
+    button:first-child {
+      margin-left: 0;
+    }
+  }
+}

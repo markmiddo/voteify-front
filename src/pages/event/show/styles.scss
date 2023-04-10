@@ -1,0 +1,94 @@
+@import "theme/colors";
+@import "theme/media";
+
+.circle {
+  position: absolute;
+  left: 415px;
+  top: 0;
+  border-radius: 50%;
+  margin-top: 20px;
+  @include media-down(md) {
+    margin-top: 5px;
+    left: 130px;
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.image {
+  margin-top: 80px;
+  margin-bottom: 120px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25), 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 700px;
+  @include media-down(md) {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 170px;
+    height: 236px;
+  }
+}
+
+.dots {
+  position: absolute;
+  bottom: 0;
+  left: -100px;
+  z-index: -1;
+  @include media-down(md) {
+    width: 120px;
+    height: 120px;
+    left: -20px;
+  }
+}
+
+.title {
+  margin-top: 80px;
+  font-size: 50px;
+  @include media-down(md) {
+    margin-top: 20px;
+    font-size: 36px;
+  }
+}
+
+.fs18 {
+  font-size: 18px;
+}
+
+.dateItem {
+
+  font-size: 18px;
+  @include media-down(lg) {
+    margin-top: 20px;
+  }
+  @include media-down(md) {
+    display: block;
+    margin-left: 5px;
+    font-size: 15px;
+  }
+}
+
+.button {
+  @include media-down(md) {
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+    justify-content: center;
+  }
+}
+
+.social {
+  margin-left: 60px;
+  @include media-down(md) {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+.signUp {
+  margin-top: 60px;
+  margin-bottom: 25px;
+  @include media-down(md) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
