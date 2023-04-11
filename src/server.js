@@ -5,12 +5,13 @@ const routes = require('./routes');
 const dev = process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'staging';
 const app = next({ dev, dir: './src' });
 const handler = routes.getRequestHandler(app);
+const port = process.env.NODE_VOTEIFY_PORT || 3000;
 
 app.prepare()
   .then(() => {
-    express().use(handler).listen(3000, (err) => {
+    express().use(handler).listen(port, (err) => {
       if (err) throw err;
-      console.log('> Ready on http://localhost:3000');
+      console.log(`> Ready on http://localhost:${port}`);
     });
   })
   .catch((ex) => {
