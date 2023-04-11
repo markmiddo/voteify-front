@@ -12,11 +12,11 @@ import { Link } from 'routes';
 import { compose } from 'redux';
 import validator from 'libs/validator';
 import { Field, reduxForm } from 'redux-form/immutable';
-import GoogleIcon from 'static/google.svg';
-import FacebookIcon from 'components/icons/social/facebook.svg';
+// import GoogleIcon from 'static/google.svg';
+// import FacebookIcon from 'components/icons/social/facebook.svg';
 import DocTitle from 'components/ui/DocTitle';
 import styles from '../auth-styles.scss';
-import reminisceOnBoardingImage from '../../../images/reminisce-home.jpg';
+// import reminisceOnBoardingImage from '../../../images/reminisce-home.jpg';
 import Dots from '../../../images/dots.svg';
 import { fromJS } from 'immutable';
 
@@ -38,9 +38,9 @@ class SignUp extends PureComponent {
             <div className={styles.promotions}>
               <Title capitalize className={styles.title}>Create A Voteify Account</Title>
               <Dots className={styles.dots} />
-              <div className="mt60">
+              {/* <div className="mt60">
                 <img src={reminisceOnBoardingImage} alt="party-one" className={styles.image} />
-              </div>
+              </div> */}
             </div>
           </Col>
           <Col md={12} lg={5} className={cx(styles.formBackground)}>
