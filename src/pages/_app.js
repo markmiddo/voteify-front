@@ -67,25 +67,25 @@ class MyApp extends App {
 
   componentDidMount() {
     /* setup interceptors for requests on client side */
-    window.fbAsyncInit = () => {
-      FB.init({
-        appId: process.env.FB_APP_ID,
-        autoLogAppEvents: true,
-        xfbml: true,
-        version: 'v3.2',
-      });
-    };
+    // window.fbAsyncInit = () => {
+    //   FB.init({
+    //     appId: process.env.FB_APP_ID,
+    //     autoLogAppEvents: true,
+    //     xfbml: true,
+    //     version: 'v3.2',
+    //   });
+    // };
 
-    (((d, s, id) => {
-      let js = d.getElementsByTagName(s)[0];
-      const fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = '//connect.facebook.net/en_US/sdk.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, 'script', 'facebook-jssdk'));
+    // (((d, s, id) => {
+    //   let js = d.getElementsByTagName(s)[0];
+    //   const fjs = d.getElementsByTagName(s)[0];
+    //   if (d.getElementById(id)) return;
+    //   js = d.createElement(s); js.id = id;
+    //   js.src = '//connect.facebook.net/en_US/sdk.js';
+    //   fjs.parentNode.insertBefore(js, fjs);
+    // })(document, 'script', 'facebook-jssdk'));
 
-    setupInterceptors(this.props.store);
+    // setupInterceptors(this.props.store);
   }
 
   render() {
