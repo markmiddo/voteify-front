@@ -10,7 +10,7 @@ import I from 'immutable';
 
 import { Col, Container, Row } from 'components/grid';
 import { AuthLinks, Logged } from './right-components';
-import Logo from 'static/img-b166.svg';
+import Logo from 'static/voteify-logo-short.svg';
 
 
 import cx from 'classnames';
@@ -42,7 +42,7 @@ class Header extends Component {
           <Row className={cx(styles.row, 'align-items-center', 'justify-content-between')}>
             <Col auto>
               <a href="/" target="_blank" rel="noopener noreferrer">
-                <Logo  style={{ width: '65px', height: '60px', fill: '#b74a8c' }} />
+                <Logo  style={{ width: '65px', height: '60px' }} />
               </a>
             </Col>
             {this.renderRightComponent()}

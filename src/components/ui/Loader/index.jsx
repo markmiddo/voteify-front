@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Logo from 'static/reminisce-logo-short.svg';
+import Logo from 'static/voteify-logo-short.svg';
 import styles from './styles.scss';
 
 export const Loader = ({ width, height }) => (
