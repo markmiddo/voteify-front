@@ -136,23 +136,24 @@ class SharePage extends Component {
                 </Button>
               </a>
             ) : (
-              <Button
-                onClick={() => this.shareEvent()}
-                disabled={isBusy || isShared}
-                type="secondary"
-                className={cx(styles.shareButton)}
-              >
-                Share on
-                <Facebook className="ml10" style={{ backgroundColor: '#ffffff' }} />
-              </Button>
+              // <Button
+              //   onClick={() => this.shareEvent()}
+              //   disabled={isBusy || isShared}
+              //   type="secondary"
+              //   className={cx(styles.shareButton)}
+              // >
+              //   Share on
+              //   <Facebook className="ml10" style={{ backgroundColor: '#ffffff' }} />
+              // </Button>
+              <></>
             )}
             <div className="ml25 d-none d-sm-inline-flex" />
             <Button
               onClick={this.tryDownload}
               type="primary"
             >
-              Save & Share
-              <Instagram className="ml10" style={{ fill: '#ffffff' }} />
+              Save & Share On Social
+              {/* <Instagram className="ml10" style={{ fill: '#ffffff' }} /> */}
             </Button>
           </div>
         </div>

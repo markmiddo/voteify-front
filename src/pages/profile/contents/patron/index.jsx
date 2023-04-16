@@ -79,20 +79,20 @@ class PatronContentComponent extends PureComponent {
                 {event.getIn(['event', 'share_description'])}
               </div>
               <footer className={styles.blockFooter}>
-                <Button
+                {/* <Button
                   onClick={() => this.shareEvent(event)}
                   type="secondary"
                 >
                   Share on
                   <Facebook className="ml10" style={{ backgroundColor: '#ffffff' }} />
-                </Button>
+                </Button> */}
                 <div className="ml25 d-none d-sm-inline-flex" />
                 <Button
                   onClick={() => this.tryDownload(event)}
                   type="primary"
                 >
-                  Save & Share
-                  <Instagram className="ml10" style={{ fill: '#ffffff' }} />
+                  Save & Share On Social
+                  {/* <Instagram className="ml10" style={{ fill: '#ffffff' }} /> */}
                 </Button>
               </footer>
             </div>
