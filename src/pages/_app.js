@@ -85,7 +85,7 @@ class MyApp extends App {
     //   fjs.parentNode.insertBefore(js, fjs);
     // })(document, 'script', 'facebook-jssdk'));
 
-    // setupInterceptors(this.props.store);
+    setupInterceptors(this.props.store);
   }
 
   render() {
