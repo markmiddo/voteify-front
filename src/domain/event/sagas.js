@@ -35,8 +35,8 @@ const eventSerializer = ({ resource }) => {
   resource.event_tracks = resource.event_tracks.sort((a, b) => {
     let x = a.track.author.toLowerCase();
     let y = b.track.author.toLowerCase();
-    if (x > y) {return -1;}
-    if (x < y) {return 1;}
+    if (x > y) {return 1;}
+    if (x < y) {return -1;}
     return 0;
   });
 
